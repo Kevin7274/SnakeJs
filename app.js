@@ -88,10 +88,10 @@ let snake = init();
 food.random();
 setInterval(() => {ctx.fillRect(0,0,500,340);  food.pinta(); snake.forEach(item  => item.pinta()); checkEat(); 
 
-               // if(gameOver()){
-                //    console.log('Lose!!!');
-                //    snake = init();
-             //   }
+                if(gameOver()){
+                    console.log('Lose!!!');
+                    snake = init();
+              }
     
                 if(direction ===1) posX++; else if(direction ===2) posY++; else if(direction ===3) posX--;
                     else posY--;  
